@@ -1,0 +1,14 @@
+pipeline{
+  agent any
+  stages{
+      stage('version'){
+          steps{
+              bat' java --version'
+      }
+}
+stage('build'){
+          steps{
+              bat 'javac hello.java'
+              bat  'java hello'
+      }
+}
